@@ -33,6 +33,29 @@ shorter base, higher back
 like `1-3`, `5mm` instead of `1mm` fillet on the lip's circle-horizontal junction
 
 
+## 1-5
+`4.95mm` base  
+`12.85mm` back
+
+like `1-4`
+
+
+## 1-6
+like `1-5`, `1mm` shell
+
+
+## 1-7
+`14.71mm` elevation
+
+like `1-6`, about same elevation as reference
+
+
+## 1-8
+`4.71mm` elevation
+
+like `1-6`, minimum elevation
+
+
 
 # reference
 `5.24mm` base  
