@@ -1,3 +1,10 @@
+#hero h1 {
+	font-size: 46px;
+}
+#hero h2 {
+	font-size: 36px;
+}
+
 div.img-box span.product-icon.icon-eye {
 	cursor: pointer;
 }
@@ -45,6 +52,25 @@ div.img-box span.product-icon.icon-eye {
 .product-info .product-options .product-option form {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+#cart tr.total td {
+	font-weight: bold;
+	font-size: 18px;
+}
+#cart tr.total td:nth-child(2) {
+	text-align: right;
+}
+#cart .delete {
+	width: 1%;
+	color: red;
+}
+#cart .delete span {
+	cursor: pointer;
+}
+
+#cart form {
+	text-align: right;
 }
 
 span.icon-heart {

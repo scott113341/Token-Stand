@@ -13,18 +13,19 @@
 		<link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/green.css" class="colors">
 		<link rel="stylesheet" href="css/custom.css">
-		<link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png" type="image/png"/>
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png" type="image/png"/>
+
+		<link rel="icon" type="image/png" href="/img/ico/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="/img/ico/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="/img/ico/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/img/ico/favicon-16x16.png" sizes="16x16" />
+
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
-	<body id="home">
+	<body id="home" ng-controller="orderController">
 
 
 
@@ -34,7 +35,7 @@
 				<div class="row">
 					<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center wow fadeInUp">
 						<h1>Token Stand</h1>
-						<h1>A stand for your token.</h1>
+						<h2>A stand for your token.</h2>
 						<br/>
 						<a class="btn btn-store smooth-scroll" href="#products">order now</a>
 					</div>
@@ -60,7 +61,7 @@
 				</header>
 			</div>
 			<div class="container">
-				<div id="projects-container" class="row" ng-controller="orderController">
+				<div id="projects-container" class="row">
 					<article class="design product col-xs-12 col-sm-6 col-md-6 wow fadeInUp" data-wow-delay="0.2s" ng-repeat="product in products">
 						<div class="product-hide-{{ product.hide }}">
 							<h3>Coming Soon</h3>
@@ -69,7 +70,7 @@
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
-							<img class="img-responsive project-image" ng-src="img/token-stand/{{ itemNumber(product) }}.jpg" />
+							<img class="img-responsive project-image" ng-src="img/token-stand/{{ productNumber(product) }}.jpg" />
 						</div>
 
 						<div class="product-info col-md-12">
@@ -87,21 +88,14 @@
 										ng-options="o as o.name for o in productOption.options">
 									</select>
 								</div>
+
 								<div class="product-option">
 									<span>{{ totalPrice(product) | currency:"$":0 }}</span>
-									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-										<input type="hidden" name="cmd" value="_xclick">
-										<input type="hidden" name="business" value="QB7KBL7ZKSZ4Q">
-										<input type="hidden" name="lc" value="US">
-										<input type="hidden" name="item_name" value="{{ product.name }}">
-										<input type="hidden" name="item_number" value="{{ itemNumber(product) }}">
-										<input type="hidden" name="amount" value="{{ totalPrice(product) | number:2 }}">
-										<input type="hidden" name="currency_code" value="USD">
-										<input type="hidden" name="button_subtype" value="services">
-										<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
-										<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-medium.png" border="0" name="submit" alt="Buy now with PayPal">
-										<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-									</form>
+									<button class="btn btn-store" ng-click="addToCart(product)">Add to Cart</button>
+
+
+
+
 								</div>
 							</div>
 						</div>
@@ -136,6 +130,67 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- cart -->
+		<section id="cart" class="padding-top-bottom gray-bg" ng-if="cart.length > 0">
+			<div class="container">
+				<header class="section-header text-center wow fadeInUp">
+					<h2>Your Order</h2>
+				</header>
+
+				<div class="row">
+					<div class="order col-lg-12">
+						<table class="table wow fadeInUp">
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th>Options</th>
+									<th>Price</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="product in cart">
+									<td>{{ product.name }}</td>
+									<td>{{ cartOptions(product) }}</td>
+									<td>{{ totalPrice(product) | currency:"$":0 }}</td>
+									<td class="delete">
+										<span ng-click="removeFromCart($index)">&times;</span>
+									</td>
+								</tr>
+								<tr class="total">
+									<td></td>
+									<td style="text-align: right;">Total:</td>
+									<td>{{ cartPrice() | currency:"$":0 }}</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="wow fadeInLeft">
+							<input type="hidden" name="cmd" value="_cart">
+							<input type="hidden" name="upload" value="1">
+							<input type="hidden" name="business" value="QB7KBL7ZKSZ4Q">
+							<input type="hidden" name="lc" value="US">
+
+							<div ng-repeat="product in cart">
+								<input type="hidden" name="item_name_{{ $index+1 }}" value="{{ product.name }}">
+								<input type="hidden" name="item_number_{{ $index+1 }}" value="{{ productNumber(product) }}">
+								<input type="hidden" name="amount_{{ $index+1 }}" value="{{ totalPrice(product) | number:2 }}">
+							</div>
+
+							<input type="hidden" name="currency_code" value="USD">
+							<input type="hidden" name="button_subtype" value="services">
+							<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+							<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-medium.png" border="0" name="submit" alt="Buy now with PayPal">
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
 					</div>
 				</div>
 			</div>
