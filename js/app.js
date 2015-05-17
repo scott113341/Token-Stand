@@ -7,7 +7,7 @@ angular.module('storeApp', [])
       {
         name: 'Original Token Stand',
         id: 'original',
-        price: 4,
+        price: 5,
         hide: false,
         description: 'Description.',
         options: [
@@ -16,8 +16,9 @@ angular.module('storeApp', [])
             options: [
               { 'name': 'White (PLA)', id: 'white-pla', price: 0 },
               { 'name': 'Black (PLA)', id: 'black-pla', price: 0 },
-              { 'name': 'White (ABS)', id: 'white-abs', price: 0 },
-              { 'name': 'Black (ABS)', id: 'black-abs', price: 0 },
+              //{ 'name': 'Wood Composite', id: 'wood', price: 5 },
+              //{ 'name': 'White (ABS)', id: 'white-abs', price: 0 },
+              //{ 'name': 'Black (ABS)', id: 'black-abs', price: 0 },
               //{ 'name': 'Gray (HIPS)', id: 'gray-hips', price: 1 },
             ],
             selected: {}
@@ -29,13 +30,24 @@ angular.module('storeApp', [])
               { 'name': '2 cm', id: '2cm', price: 1 },
             ],
             selected: {}
-          }
+          },
+          /*
+          {
+            name: 'Logo',
+            options: [
+              { 'name': 'None', id: 'none', price: 0 },
+              { 'name': 'eBay', id: 'ebay', price: 0 },
+              { 'name': 'PayPal', id: 'paypal', price: 1 },
+            ],
+            selected: {}
+          },
+          */
         ]
       },
       {
         name: 'Monitor Token Stand',
         id: 'monitor',
-        price: 5,
+        price: 6,
         hide: false,
         description: 'Description.',
         options: [
@@ -44,8 +56,8 @@ angular.module('storeApp', [])
             options: [
               { 'name': 'White (PLA)', id: 'white-pla', price: 0 },
               { 'name': 'Black (PLA)', id: 'black-pla', price: 0 },
-              { 'name': 'White (ABS)', id: 'white-abs', price: 0 },
-              { 'name': 'Black (ABS)', id: 'black-abs', price: 0 },
+              //{ 'name': 'White (ABS)', id: 'white-abs', price: 0 },
+              //{ 'name': 'Black (ABS)', id: 'black-abs', price: 0 },
               //{ 'name': 'Gray (HIPS)', id: 'gray-pla', price: 1 },
             ],
             selected: {}
@@ -53,14 +65,15 @@ angular.module('storeApp', [])
           {
             name: 'Angle',
             options: [
-              { 'name': '35°', id: '35', price: 0 },
+              { 'name': '30°', id: '30', price: 0 },
               { 'name': '45°', id: '45', price: 0 },
-              { 'name': '55°', id: '55', price: 0 },
+              { 'name': '60°', id: '60', price: 0 },
+              //{ 'name': '55°', id: '55', price: 0 },
             ],
             selected: {}
-          }
+          },
         ]
-      }
+      },
     ];
 
     $scope.totalPrice = function(product) {

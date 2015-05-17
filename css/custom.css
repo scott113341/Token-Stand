@@ -58,6 +58,9 @@ div.img-box span.product-icon.icon-eye {
 	font-weight: bold;
 	font-size: 18px;
 }
+#cart tr.total.no-border td {
+	border: none;
+}
 #cart tr.total td:nth-child(2) {
 	text-align: right;
 }

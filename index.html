@@ -36,8 +36,6 @@
 					<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center wow fadeInUp">
 						<h1>Token Stand</h1>
 						<h2>A stand for your token.</h2>
-						<br/>
-						<a class="btn btn-store smooth-scroll" href="#products">order now</a>
 					</div>
 				</div>
 			</div>
@@ -57,7 +55,7 @@
 			<div class="container">
 				<header class="section-header text-center wow fadeInUp">
 					<h2>Changing the world one hard token at a time.</h2>
-					<h3>Hand-made artisanal crafts?  Naw, we use <a href="https://www.lulzbot.com/products/lulzbot-mini-3d-printer" target="_blank">a robot</a> to print all the Token Stands.</h3>
+					<h3>Hand-made artisanal crafts?  Naw, we use <a href="https://www.lulzbot.com/products/lulzbot-mini-3d-printer" target="_blank">a robot</a> to 3D print all the Token Stands.</h3>
 				</header>
 			</div>
 			<div class="container">
@@ -92,10 +90,6 @@
 								<div class="product-option">
 									<span>{{ totalPrice(product) | currency:"$":0 }}</span>
 									<button class="btn btn-store" ng-click="addToCart(product)">Add to Cart</button>
-
-
-
-
 								</div>
 							</div>
 						</div>
@@ -156,7 +150,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr ng-repeat="product in cart">
+								<tr ng-repeat="product in cart" class="wow fadeInLeft">
 									<td>{{ product.name }}</td>
 									<td>{{ cartOptions(product) }}</td>
 									<td>{{ totalPrice(product) | currency:"$":0 }}</td>
@@ -165,6 +159,12 @@
 									</td>
 								</tr>
 								<tr class="total">
+									<td></td>
+									<td style="text-align: right;">Shipping:</td>
+									<td>Free</td>
+									<td></td>
+								</tr>
+								<tr class="total no-border">
 									<td></td>
 									<td style="text-align: right;">Total:</td>
 									<td>{{ cartPrice() | currency:"$":0 }}</td>
@@ -203,7 +203,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center wow fadeInLeft">
-						<h3 class="center cta-message">Orders can be picked up from our desk at 15.3.332</h3>
+						<h3 class="center cta-message">Questions?  <a href="mailto:schardy@ebay.com,mmedal@ebay.com" target="_blank" style="color: white; text-decoration: underline;">Email us.</a></h3>
+						<h3 class="center cta-message">Orders can be picked up from our desk at Ebay North Campus, 15.3.332</h3>
 						<h3 class="center cta-message">(we might do shipping eventually if there's enough interest)</h3>
 					</div>
 				</div>
@@ -239,6 +240,8 @@
 			<div class="container">
 				<p class="text-center copyright wow fadeInLeftBig">
 					Made without <span class="icon-heart"></span> in Santa Clara, California by <a href="https://www.linkedin.com/in/mmedal" target="_blank">Matt Medal</a> and <a href="http://scotthardy.me" target="_blank">Scott Hardy</a>.
+					<br/>
+          Questions?  <a href="mailto:schardy@ebay.com,mmedal@ebay.com" target="_blank">Email us.</a>
 				</p>
 			</div>
 		</footer>
