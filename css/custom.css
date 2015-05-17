@@ -1,81 +1,70 @@
 #hero h1 {
-	font-size: 46px;
+  font-size: 46px;
 }
 #hero h2 {
-	font-size: 36px;
+  font-size: 36px;
 }
-
 div.img-box span.product-icon.icon-eye {
-	cursor: pointer;
+  cursor: pointer;
 }
-
 #products {
-	padding-bottom: 10px;
+  padding-bottom: 10px;
 }
-
-.product {
-	/*padding-bottom: 5px;*/
+#products .product-hide-false {
+  display: none;
 }
-
-.product-hide-false {
-	display: none;
+#products .product-hide-true {
+  position: absolute;
+  width: calc(70%);
+  height: 100%;
+  background: black;
+  opacity: 0.6;
+  z-index: 100;
+  border-radius: 5px;
 }
-.product-hide-true {
-	position: absolute;
-	width: calc(100% - 30px);
-	height: 100%;
-	background: black;
-	opacity: 0.6;
-	z-index: 100;
-	border-radius: 5px;
+#products .product-hide-true h3 {
+  position: absolute;
+  top: 130px;
+  width: 100%;
+  line-height: 0;
+  text-align: center;
+  color: white;
 }
-.product-hide-true h3 {
-	position: absolute;
-	top: 130px;
-	width: 100%;
-	line-height: 0;
-	text-align: center;
-	color: white;
+#products .product-info .product-options {
+  margin-top: 3px;
+  font-size: 16px;
 }
-
-.product-info .product-options {
-	margin-top: 3px;
-	font-size: 16px;
+#products .product-info .product-options span {
+  margin-right: 10px;
+  font-weight: 600;
 }
-.product-info .product-options span {
-	margin-right: 10px;
-	font-weight: 600;
+#products .product-info .product-option {
+  margin-top: 8px;
 }
-.product-info .product-options .product-option {
-	margin-top: 8px;
+#products .product-info .product-option form {
+  display: inline-block;
+  vertical-align: middle;
 }
-.product-info .product-options .product-option form {
-	display: inline-block;
-	vertical-align: middle;
-}
-
 #cart tr.total td {
-	font-weight: bold;
-	font-size: 18px;
-}
-#cart tr.total.no-border td {
-	border: none;
+  font-weight: bold;
+  font-size: 18px;
 }
 #cart tr.total td:nth-child(2) {
-	text-align: right;
+  text-align: right;
+}
+#cart tr.total.no-border td {
+  border: none;
 }
 #cart .delete {
-	width: 1%;
-	color: red;
+  width: 1%;
+  color: red;
 }
 #cart .delete span {
-	cursor: pointer;
+  cursor: pointer;
 }
-
 #cart form {
-	text-align: right;
+  text-align: right;
 }
-
 span.icon-heart {
-	color: #ff5b58;
+  color: #ff5b58;
 }
