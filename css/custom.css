@@ -45,6 +45,9 @@ div.img-box span.product-icon.icon-eye {
   display: inline-block;
   vertical-align: middle;
 }
+#project-modal .close {
+  color: #888;
+}
 #cart tr.total td {
   font-weight: bold;
   font-size: 18px;

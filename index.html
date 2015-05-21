@@ -14,10 +14,10 @@
 		<link rel="stylesheet" href="css/green.css" class="colors">
 		<link rel="stylesheet" href="css/custom.css">
 
-		<link rel="icon" type="image/png" href="/img/ico/favicon-196x196.png" sizes="196x196" />
-		<link rel="icon" type="image/png" href="/img/ico/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/png" href="/img/ico/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="/img/ico/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="/img/favicon/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
 
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -42,8 +42,13 @@
 			<div class="overlay-bg"></div>
 			<div id="hero-slides">
 				<div class="slides-container">
-					<img src="img/token-stand/1-5.jpg" />
-					<img src="img/01.jpg" />
+					<img src="img/pics/DSC_4976.jpg" />
+          <img src="img/pics/DSC_5020.jpg" />
+          <!--<img src="img/pics/DSC_4992.jpg" />-->
+          <img src="img/pics/DSC_4988.jpg" />
+          <img src="img/pics/DSC_5036.jpg" />
+          <img src="img/pics/DSC_4993.jpg" />
+          <img src="img/pics/DSC_5032.jpg" />
 				</div>
 			</div>
 		</section>
@@ -68,7 +73,7 @@
 						<div class="img-box">
 							<div class="hover-mask2"></div>
 							<span class="product-icon icon-eye"></span>
-							<img class="img-responsive project-image" ng-src="img/token-stand/{{ productNumber(product) }}.jpg" />
+							<img class="img-responsive project-image" ng-src="img/models/{{ productNumber(product) }}.jpg" />
 						</div>
 
 						<div class="product-info col-md-12">
@@ -93,8 +98,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="sr-only project-description" data-images="img/01.jpg,img/02.jpg,img/03.jpg,img/04.jpg,img/05.jpg">
-							<p>{{ product.description }}</p>
+						<div class="sr-only project-description" data-images="{{ modalImages(product) }}">
+							<p ng-bind-html="product.description"></p>
 						</div>
 					</article>
 				</div>
@@ -112,15 +117,11 @@
 							<div class="container">
 								<div class="row">
 									<div id="project-sidebar" class="col-md-4 ">
-										<h2 id="sdbr-title">Flat UI-Kit</h2>
-										<div>
-											<div id="sdbr-price">200</div>
-											<div id="sdbr-oldprice">500</div>
-										</div>
+										<h2 id="sdbr-title">Title</h2>
 									</div>
 									<div id="project-content" class="col-md-8 ">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
-									</div>
+                    <p>Content</p>
+                  </div>
 								</div>
 							</div>
 						</div>
@@ -226,7 +227,7 @@
 					<div class="col-md-8 cta-message wow fadeInUp">
 						<p>When we set out to revolutionize the angle at which you see your hard token, we weren't sure what to expect.</p>
 						<p>After countless hours of prototyping and redefining what it means to hold a token, we're proud to announce the <strong>Token Stand</strong>, a product we believe will disrupt the entire industry of token standing.</p>
-						<p>In the spirit of <a href="http://en.wikipedia.org/wiki/Shrek" target="_blank">Shrek</a>, we have decided to open-source our hard work so that others may be inspired by our mission.</p>
+						<!--<p>In the spirit of <a href="http://en.wikipedia.org/wiki/Shrek" target="_blank">Shrek</a>, we have decided to open-source our hard work so that others may be inspired by our mission.</p>-->
 						<a class="btn btn-store outline" href="https://github.com/scott113341/Token-Stand" target="_blank">github project</a>
 					</div>
 				</div>

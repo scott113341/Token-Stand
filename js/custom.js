@@ -91,7 +91,7 @@ $(document).ready(function() {
 		$('#project-modal').on('show.bs.modal', function() {
 			$(this).find('#sdbr-title').text(title);
 			$(this).find('#sdbr-price').text(price);
-			$(this).find('#project-content').html(descr).append('<a id="btn-order" class="btn btn-store btn-right"  href="#">Order now</a>');
+			$(this).find('#project-content').html(descr).append('<a id="btn-order" class="btn btn-store">Close</a>');
 			$(this).find('.screen').addClass('slides').html(slidesHtml);
 			if (elemDataCont.data('oldprice')) {
 				$(this).find('#sdbr-oldprice').show().text(elemDataCont.data('oldprice'))
@@ -121,8 +121,6 @@ $(document).ready(function() {
 		$('#project-modal').modal('hide');
 		$(this).find('.loader').show();
 		$(this).find('.screen').removeClass('slides').removeClass('done').html('').superslides('destroy');
-		var aTag = $("section[id='orderform']");
-		$('html,body').animate({scrollTop: aTag.offset().top},'slow');
 	});
 
 	/* style switch	==============================================*/
