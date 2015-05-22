@@ -64,15 +64,14 @@ h3.center {
 .welcome-content {
 	position: absolute;
 	left: 0;
-	top: 50%;
+	top: 0;
 	width: 100%;
-	margin-top: -10em;
 	z-index: 12;
 }
 .hero-image-bg {
 	overflow: hidden;
 	background-size: cover;
-	background-image: url('../img/01.jpg');
+	background-image: url('../img/pics/DSC_4976.jpg');
 	background-position: center 16%;
 	position: relative;
 	padding: 180px 0 120px 0;
@@ -111,9 +110,16 @@ h3.center {
 }
 
 
-.overlay-bg {position: absolute; top: 0; left: 0; right: 0; bottom: 0;  opacity: 0.5;
-	background-color: #000;
-	z-index: 10;}
+.overlay-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/*opacity: 0.5;*/
+	/*background-color: #000;*/
+	z-index: 10;
+}
 
 
 .dark-bg a {
@@ -991,9 +997,6 @@ form p {
 	}
 	.modal-header {
 		height: 350px;
-	}
-	.welcome-content {
-		top: 43%;
 	}
 	.welcome-content img {
 		padding: 0 15px; 
