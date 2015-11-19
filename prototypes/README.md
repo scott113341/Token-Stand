@@ -60,11 +60,11 @@ like `1-6`, about same elevation as reference
 like `1-6`, minimum elevation
 
 
-## 1-9
+## 1-9 :star:
 like `1-5`, right side shortened by `1mm`
 
 
-## 1-10
+## 1-10 :star:
 `17.71mm` elevation
 
 like `1-9`, `10mm` taller
@@ -97,23 +97,23 @@ like `2-3`, thicker everywhere, about `5.5mm` thickness
 * back is not tall enough, token interferes with monitor
 
 
-## 2-5
+## 2-5 :star:
 like `2-4`, correct back height
 
 
-## 2-6
+## 2-6 :star:
 `45°` angle
 
 like `2-5`, `45°` angle
 
 
-## 2-7
+## 2-7 :star:
 `30°` angle
 
 like `2-5`, `30°` angle
 
 
-## 2-8
+## 2-8 :star:
 `60°` angle
 
 like `2-5`, `60°` angle
