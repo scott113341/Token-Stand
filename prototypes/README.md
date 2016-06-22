@@ -97,7 +97,7 @@ like `2-3`, thicker everywhere, about `5.5mm` thickness
 * back is not tall enough, token interferes with monitor
 
 
-## 2-5 :star:
+## 2-5
 like `2-4`, correct back height
 
 
